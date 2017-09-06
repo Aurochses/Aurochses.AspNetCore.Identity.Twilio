@@ -24,13 +24,13 @@ namespace Aurochses.Identity.Twilio.IntegrationTests
             };
         }
 
-        private SmsService GetSmsService(string fromPhoneNumber, string accountSid = null, string authToken = null)
+        private SmsService GetSmsService(string fromPhoneNumber = null, string accountSid = null, string authToken = null)
         {
             TwilioClient.Init(accountSid ?? _fixture.Configuration["Twilio:AccountSid"], authToken ?? _fixture.Configuration["Twilio:AuthToken"]);
 
             var twilioOptions = new TwilioOptions
             {
-                FromPhoneNumber = fromPhoneNumber,
+                FromPhoneNumber = fromPhoneNumber ?? _fixture.Configuration["Identity:TwilioOptions:FromPhoneNumber"],
                 TwoFactorTokenBodyFormat = _fixture.Configuration["Identity:TwilioOptions:TwoFactorTokenBodyFormat"]
             };
 
@@ -66,7 +66,7 @@ namespace Aurochses.Identity.Twilio.IntegrationTests
         public async Task SendTwoFactorTokenAsync_ToPhoneNumber_Failed(string toPhoneNumber, int exceptionCode)
         {
             // Arrange
-            var smsService = GetSmsService("+15005550006");
+            var smsService = GetSmsService();
 
             var user = GetApplicationUser(toPhoneNumber);
 
@@ -83,7 +83,7 @@ namespace Aurochses.Identity.Twilio.IntegrationTests
         public async Task SendTwoFactorTokenAsync_IncorrectAccountSid()
         {
             // Arrange
-            var smsService = GetSmsService("+15005550006", "IncorrectAccountSid");
+            var smsService = GetSmsService(accountSid: "IncorrectAccountSid");
 
             var user = GetApplicationUser("+TestToPhoneNumber");
 
@@ -100,7 +100,7 @@ namespace Aurochses.Identity.Twilio.IntegrationTests
         public async Task SendTwoFactorTokenAsync_IncorrectAuthToken()
         {
             // Arrange
-            var smsService = GetSmsService("+15005550006", authToken: "IncorrectAuthToken");
+            var smsService = GetSmsService(authToken: "IncorrectAuthToken");
 
             var user = GetApplicationUser("+TestToPhoneNumber");
 
@@ -117,7 +117,7 @@ namespace Aurochses.Identity.Twilio.IntegrationTests
         public async Task SendTwoFactorTokenAsync_Success()
         {
             // Arrange
-            var smsService = GetSmsService("+15005550006");
+            var smsService = GetSmsService();
 
             var user = GetApplicationUser("+375297841506");
 
