@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Aurochses.Identity.Twilio.IntegrationTests.Fakes
+namespace Aurochses.AspNetCore.Identity.Twilio.IntegrationTests.Fakes
 {
     public class FakeApplicationUser : IApplicationUser
     {

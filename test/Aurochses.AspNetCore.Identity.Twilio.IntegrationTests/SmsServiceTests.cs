@@ -1,11 +1,11 @@
 ﻿using System.Threading.Tasks;
-using Aurochses.Identity.Twilio.IntegrationTests.Fakes;
+using Aurochses.AspNetCore.Identity.Twilio.IntegrationTests.Fakes;
 using Microsoft.Extensions.Options;
 using Twilio;
 using Twilio.Exceptions;
 using Xunit;
 
-namespace Aurochses.Identity.Twilio.IntegrationTests
+namespace Aurochses.AspNetCore.Identity.Twilio.IntegrationTests
 {
     public class SmsServiceTests : IClassFixture<SmsServiceFixture>
     {

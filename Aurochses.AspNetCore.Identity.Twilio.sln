@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{652D6DF0-4383-42D5-A6D2-3892B1BE4856}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{3DB9F2FD-32D8-4B39-ACA5-7CC69726157E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aurochses.AspNetCore.Identity.Twilio", "src\Aurochses.AspNetCore.Identity.Twilio\Aurochses.AspNetCore.Identity.Twilio.csproj", "{667D740F-FCA4-4311-8039-92C74F9699D3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aurochses.AspNetCore.Identity.Twilio.IntegrationTests", "test\Aurochses.AspNetCore.Identity.Twilio.IntegrationTests\Aurochses.AspNetCore.Identity.Twilio.IntegrationTests.csproj", "{E2BAC245-8941-44B2-B32E-CAA9FDEF41D5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aurochses.AspNetCore.Identity.Twilio.Tests", "test\Aurochses.AspNetCore.Identity.Twilio.Tests\Aurochses.AspNetCore.Identity.Twilio.Tests.csproj", "{28231A42-9B29-4421-82E8-CFDD2B0A74C1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{667D740F-FCA4-4311-8039-92C74F9699D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{667D740F-FCA4-4311-8039-92C74F9699D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{667D740F-FCA4-4311-8039-92C74F9699D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{667D740F-FCA4-4311-8039-92C74F9699D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2BAC245-8941-44B2-B32E-CAA9FDEF41D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2BAC245-8941-44B2-B32E-CAA9FDEF41D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2BAC245-8941-44B2-B32E-CAA9FDEF41D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2BAC245-8941-44B2-B32E-CAA9FDEF41D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28231A42-9B29-4421-82E8-CFDD2B0A74C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28231A42-9B29-4421-82E8-CFDD2B0A74C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28231A42-9B29-4421-82E8-CFDD2B0A74C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28231A42-9B29-4421-82E8-CFDD2B0A74C1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{667D740F-FCA4-4311-8039-92C74F9699D3} = {652D6DF0-4383-42D5-A6D2-3892B1BE4856}
+		{E2BAC245-8941-44B2-B32E-CAA9FDEF41D5} = {3DB9F2FD-32D8-4B39-ACA5-7CC69726157E}
+		{28231A42-9B29-4421-82E8-CFDD2B0A74C1} = {3DB9F2FD-32D8-4B39-ACA5-7CC69726157E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4D886468-BFAA-4042-BC81-117D85562F61}
+	EndGlobalSection
+EndGlobal
