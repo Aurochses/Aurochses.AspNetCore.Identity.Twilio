@@ -4,12 +4,12 @@ using Twilio.Exceptions;
 using Twilio.Rest.Api.V2010.Account;
 using Twilio.Types;
 
-namespace Aurochses.Identity.Twilio
+namespace Aurochses.AspNetCore.Identity.Twilio
 {
     /// <summary>
     /// Class SmsService.
     /// </summary>
-    /// <seealso cref="Aurochses.Identity.ISmsService" />
+    /// <seealso cref="Aurochses.AspNetCore.Identity.ISmsService" />
     public class SmsService : ISmsService
     {
         private readonly TwilioOptions _twilioOptions;
@@ -35,7 +35,7 @@ namespace Aurochses.Identity.Twilio
             {
                 var messageResource = await MessageResource.CreateAsync(
                     new PhoneNumber(user.PhoneNumber),
-                    from: new PhoneNumber(_twilioOptions.FromPhoneNumber),
+                    @from: new PhoneNumber(_twilioOptions.FromPhoneNumber),
                     body: string.Format(_twilioOptions.TwoFactorTokenBodyFormat, token)
                 );
 

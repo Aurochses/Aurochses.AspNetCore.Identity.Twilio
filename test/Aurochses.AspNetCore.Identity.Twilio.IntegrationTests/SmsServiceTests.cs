@@ -1,11 +1,11 @@
 ﻿using System.Threading.Tasks;
-using Aurochses.Identity.Twilio.IntegrationTests.Fakes;
+using Aurochses.AspNetCore.Identity.Twilio.IntegrationTests.Fakes;
 using Microsoft.Extensions.Options;
 using Twilio;
 using Twilio.Exceptions;
 using Xunit;
 
-namespace Aurochses.Identity.Twilio.IntegrationTests
+namespace Aurochses.AspNetCore.Identity.Twilio.IntegrationTests
 {
     public class SmsServiceTests : IClassFixture<SmsServiceFixture>
     {
@@ -52,7 +52,7 @@ namespace Aurochses.Identity.Twilio.IntegrationTests
             var sendResult = await smsService.SendTwoFactorTokenAsync(user, "TestToken");
 
             // Assert
-            Assert.Equal(false, sendResult.Succeeded);
+            Assert.False(sendResult.Succeeded);
             var apiException = Assert.IsAssignableFrom<ApiException>(sendResult.Response);
             Assert.Equal(exceptionCode, apiException.Code);
         }
@@ -74,7 +74,7 @@ namespace Aurochses.Identity.Twilio.IntegrationTests
             var sendResult = await smsService.SendTwoFactorTokenAsync(user, "TestToken");
 
             // Assert
-            Assert.Equal(false, sendResult.Succeeded);
+            Assert.False(sendResult.Succeeded);
             var apiException = Assert.IsAssignableFrom<ApiException>(sendResult.Response);
             Assert.Equal(exceptionCode, apiException.Code);
         }
@@ -91,7 +91,7 @@ namespace Aurochses.Identity.Twilio.IntegrationTests
             var sendResult = await smsService.SendTwoFactorTokenAsync(user, "TestToken");
 
             // Assert
-            Assert.Equal(false, sendResult.Succeeded);
+            Assert.False(sendResult.Succeeded);
             var apiException = Assert.IsAssignableFrom<ApiException>(sendResult.Response);
             Assert.Equal(20404, apiException.Code);
         }
@@ -108,7 +108,7 @@ namespace Aurochses.Identity.Twilio.IntegrationTests
             var sendResult = await smsService.SendTwoFactorTokenAsync(user, "TestToken");
 
             // Assert
-            Assert.Equal(false, sendResult.Succeeded);
+            Assert.False(sendResult.Succeeded);
             var apiException = Assert.IsAssignableFrom<ApiException>(sendResult.Response);
             Assert.Equal(20003, apiException.Code);
         }
