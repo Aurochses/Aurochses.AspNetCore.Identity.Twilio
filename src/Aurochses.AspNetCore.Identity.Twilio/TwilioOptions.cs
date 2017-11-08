@@ -1,4 +1,4 @@
-﻿namespace Aurochses.Identity.Twilio
+﻿namespace Aurochses.AspNetCore.Identity.Twilio
 {
     /// <summary>
     /// Class TwilioOptions.

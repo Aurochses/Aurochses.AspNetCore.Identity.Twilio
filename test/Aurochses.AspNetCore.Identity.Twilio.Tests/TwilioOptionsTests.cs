@@ -1,6 +1,6 @@
 ﻿using Xunit;
 
-namespace Aurochses.Identity.Twilio.Tests
+namespace Aurochses.AspNetCore.Identity.Twilio.Tests
 {
     public class TwilioOptionsTests
     {
