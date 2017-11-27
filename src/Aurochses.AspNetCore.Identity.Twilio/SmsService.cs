@@ -35,7 +35,7 @@ namespace Aurochses.AspNetCore.Identity.Twilio
             {
                 var messageResource = await MessageResource.CreateAsync(
                     new PhoneNumber(user.PhoneNumber),
-                    @from: new PhoneNumber(_twilioOptions.FromPhoneNumber),
+                    from: new PhoneNumber(_twilioOptions.FromPhoneNumber),
                     body: string.Format(_twilioOptions.TwoFactorTokenBodyFormat, token)
                 );
 
